@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ModalsProvider } from './contexts/ModalsProvider';
+import { FormProvider } from './contexts/FormProvider';
+import { BrowserRouter } from 'react-router-dom';
+import AuthProvider from './contexts/AuthProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ModalsProvider>
+        <FormProvider>
+          <AuthProvider>
+            <App />
+          </AuthProvider>
+        </FormProvider>
+      </ModalsProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
