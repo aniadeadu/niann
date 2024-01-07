@@ -7,17 +7,20 @@ import NIANN_black_bold from '../assets/logos/NIANN_black_bold.png'
 import { ModalContext } from '../contexts/ModalsProvider';
 import { MenuUI } from '../components/modals/MenuUI';
 import { SearchUI } from '../components/modals/SearchUI';
-import { Link } from 'react-router-dom';
-
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 export const NavBar = () => {
+   const location = useLocation();
+   const navigate = useNavigate();
    const { setNavBar_menu } = useContext(ModalContext);
    const { setNavBar_search} = useContext(ModalContext)
    const [contact, setContact] = useState('');
+   // const [bgColor, setBgColor] = useState('')
 
    const links = [
       {
          id: 0,
-         name: shopping_bag
+         name: shopping_bag,
+         link: '/shopping_bag'
       },
       {
          id: 1,
@@ -38,22 +41,20 @@ export const NavBar = () => {
    useEffect(() => {
       if (window.innerWidth >= 700) {
          setContact(
-            
             <ul className='w-full'>
-               <li
-                  className='text-black font-medium'
-               >
-                     Contact us</li>
+               <li className='text-black font-medium'>
+                  Contact us
+               </li>
             </ul>
          );
       }
    }, []);
 
-
+   
    return (
 
       <div
-         className='w-full scroll-smooth z-30 py-5 px-3 sm:px-5 md:10 lg:px-20 2xl:px-36 fixed top-0 bg-[rgba(255,255,255,.8)] '
+         className='w-full scroll-smooth z-30 py-5 px-3 sm:px-5 md:10 lg:px-20 2xl:px-36 fixed top-0 bg-[rgba(255,255,255,.8)] ' 
       >
          <nav className='h-6 flex w-full items-center justify-between'>
             {
@@ -61,7 +62,7 @@ export const NavBar = () => {
             }
 
             <div 
-               className='md:w-80 mt-3 mx-auto w-[11.5rem] -ml-6 lg:-ml-0' 
+               className='md:w-96 mt-3 mx-auto w-56 -ml-6 lg:-ml-0' 
             >
                <Link to="/">
                   <img 
@@ -73,7 +74,7 @@ export const NavBar = () => {
                </Link>
             </div>
             <ul 
-               className=" flex gap-2 md:gap-5 w-full justify-end"
+               className=" flex gap-3 sm:gap-4 md:gap-5 w-full justify-end"
             >
                {
                   links.map((link) => {
@@ -83,6 +84,7 @@ export const NavBar = () => {
                            key={link.id}
                            onClick={() => 
                               {
+                                 navigate(link.link)
                                  if (link.type === "menu") {
                                     setNavBar_menu(true);
                                     setNavBar_search(false);

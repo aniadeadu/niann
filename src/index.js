@@ -7,18 +7,27 @@ import { ModalsProvider } from './contexts/ModalsProvider';
 import { FormProvider } from './contexts/FormProvider';
 import { BrowserRouter } from 'react-router-dom';
 import AuthProvider from './contexts/AuthProvider';
+import { UserProvider } from './contexts/UserProvider';
+import CartProvider from './contexts/CartProvider';
+import SizeProvider from './contexts/SizeProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ModalsProvider>
-        <FormProvider>
-          <AuthProvider>
-            <App />
-          </AuthProvider>
-        </FormProvider>
-      </ModalsProvider>
+      <UserProvider>
+        <ModalsProvider>
+          <FormProvider>
+            <AuthProvider>
+              <CartProvider>
+                <SizeProvider>
+                <App />
+                </SizeProvider>
+              </CartProvider>
+            </AuthProvider>
+          </FormProvider>
+        </ModalsProvider>
+        </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

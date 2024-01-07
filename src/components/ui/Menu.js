@@ -2,7 +2,7 @@ export const MenuListWrappper = ({children, style, captalize, onClick}) => {
    return (
       <div
          style={style}
-         className={"font-medium underline  text-white  cursor-pointer " + captalize}
+         className={"underline  text-black font-medium  capitalize cursor-pointer " + captalize}
          onClick={onClick}
       >
          {children}

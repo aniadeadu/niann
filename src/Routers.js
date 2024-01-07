@@ -9,6 +9,7 @@ import { M_wearsUI } from "./pages/products/men/M_wearsUI"
 import { M_bagsUI } from "./pages/products/men/M_bagsUI"
 import { M_shoesUI } from "./pages/products/men/M_shoesUI"
 import { ProductsUI } from "./pages/products/ProductsUI"
+import { Cart } from "./pages/Cart"
 
 export const Routers = () => {
    return (
@@ -41,6 +42,7 @@ export const Routers = () => {
             <Route path='/shopping/women/shoes/:WShoeName/:ProductId' Component={ProductsUI}/>
             <Route path='/shopping/men/shoes/:MShoeName/:ProductId' Component={ProductsUI}/>
             <Route path='/shopping/men/bags/bagpacks/:MBagName/:ProductId' Component={ProductsUI}/>
+            <Route path='/shopping_bag' Component={Cart}/>
           </Routes>
          </>
       </div>

@@ -1,11 +1,11 @@
-import { productproperties } from "../../../components/ui/ProductsGallery";
+import { productproperties } from "../../../components/ui/ProductsProps";
 import ankle_boot_with_golden from "../../../assets/images/products/women/shoes/ankle_boot_with_golden.png";
 import ballet_flat_with_asymmetric_bow from "../../../assets/images/products/women/shoes/ballet_flat_with_asymmetric_bow.png";
-import black_ankle_boot_with_metallic_toe from "../../../assets/images/products/women/shoes/black_ankle_boot_with_metallic_toe.jpg";
-import black_ankle_boot from "../../../assets/images/products/women/shoes/black_ankle_boot.jpg";
-import black_bootie from "../../../assets/images/products/women/shoes/black_bootie.jpg";
-import black_double_bow_ankle_boot from "../../../assets/images/products/women/shoes/black_double_bow_ankle_boot.jpg";
-import black_vara_plate_ballet_flat from "../../../assets/images/products/women/shoes/black_vara_plate_ballet_flat.jpg";
+import black_ankle_boot_with_metallic_toe from "../../../assets/images/products/women/shoes/black_ankle_boot_with_metallic_toe.png";
+import black_ankle_boot from "../../../assets/images/products/women/shoes/black_ankle_boot.png";
+import black_bootie from "../../../assets/images/products/women/shoes/black_bootie.png";
+import black_double_bow_ankle_boot from "../../../assets/images/products/women/shoes/black_double_bow_ankle_boot.png";
+import black_vara_plate_ballet_flat from "../../../assets/images/products/women/shoes/black_vara_plate_ballet_flat.png";
 import brown_ankle_boot_with_golden from "../../../assets/images/products/women/shoes/brown_ankle_boot_with_golden.png";
 import gold_vara_bow_ballet_flat from "../../../assets/images/products/women/shoes/gold_vara_bow_ballet_flat.png";
 import green_vara_bow_ballet_flat from "../../../assets/images/products/women/shoes/green_vara_bow_ballet_flat.png";

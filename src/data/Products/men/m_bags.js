@@ -1,7 +1,7 @@
-import { productproperties } from "../../../components/ui/ProductsGallery";
-import dual_tone_backpack_black_blue from "../../../assets/images/products/men/backpacks/dual_tone_backpack_black_blue.jpg";
-import dual_tone_backpack_black_red from "../../../assets/images/products/men/backpacks/dual_tone_backpack_black_red.jpg";
-import technical_backpack_black from "../../../assets/images/products/men/backpacks/technical_backpack_black.jpg";
+import { productproperties } from "../../../components/ui/ProductsProps";
+import dual_tone_backpack_black_blue from "../../../assets/images/products/men/backpacks/dual_tone_backpack_black_blue.png";
+import dual_tone_backpack_black_red from "../../../assets/images/products/men/backpacks/dual_tone_backpack_black_red.png";
+import technical_backpack_black from "../../../assets/images/products/men/backpacks/technical_backpack_black.png";
 
 export const m_bags = [
    productproperties(

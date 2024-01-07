@@ -1,12 +1,12 @@
-import { productproperties } from "../../../components/ui/ProductsGallery";
-import black_loafer_with_wide_toe from "../../../assets/images/products/men/shoes/black_loafer_with_wide_toe.jpg";
-import black_loafer_with_gold_metal_tip from "../../../assets/images/products/men/shoes/black_loafer_with_gold_metal_tip.jpg";
-import black_moccasin_with_white_signature  from "../../../assets/images/products/men/shoes/black_moccasin_with_white_signature.jpg";
-import black_moccasin_with_signature from "../../../assets/images/products/men/shoes/black_moccasin_with_signature.jpg";
-import brown_penny_loafer from "../../../assets/images/products/men/shoes/brown_penny_loafer.jpg";
-import loafer_with_contrasting_insert from "../../../assets/images/products/men/shoes/loafer_with_contrasting_insert.jpg";
-import two_toned_moccasin_with_gancini_ornament from "../../../assets/images/products/men/shoes/two_toned_moccasin_with_gancini_ornament.jpg";
-import white_moccasin_with_gancini_ornament from "../../../assets/images/products/men/shoes/white_moccasin_with_gancini_ornament.jpg";
+import { productproperties } from "../../../components/ui/ProductsProps";
+import black_loafer_with_wide_toe from "../../../assets/images/products/men/shoes/black_loafer_with_wide_toe.png";
+import black_loafer_with_gold_metal_tip from "../../../assets/images/products/men/shoes/black_loafer_with_gold_metal_tip.png";
+import black_moccasin_with_white_signature  from "../../../assets/images/products/men/shoes/black_moccasin_with_white_signature.png";
+import black_moccasin_with_signature from "../../../assets/images/products/men/shoes/black_moccasin_with_signature.png";
+import brown_penny_loafer from "../../../assets/images/products/men/shoes/brown_penny_loafer.png";
+import loafer_with_contrasting_insert from "../../../assets/images/products/men/shoes/loafer_with_contrasting_insert.png";
+import two_toned_moccasin_with_gancini_ornament from "../../../assets/images/products/men/shoes/two_toned_moccasin_with_gancini_ornament.png";
+import white_moccasin_with_gancini_ornament from "../../../assets/images/products/men/shoes/white_moccasin_with_gancini_ornament.png";
 
 
 export const m_shoes = [

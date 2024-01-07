@@ -1,18 +1,18 @@
 
 import { m_wears } from "../../../data/Products/men/m_wears";
-import { ProductsGalleryWrapper } from "../../../components/ui/ProdsGalleryWrapper";
+import { ProductsGallery } from "../../../components/ui/ProductsGallery";
 import { useNavigate } from "react-router-dom";
+import { PropsContainer } from "../../../components/ui/PropsContainer";
 
 export const M_wearsUI = () => {
    const navigate = useNavigate();
 
    return (
-      <ProductsGalleryWrapper>
+      <ProductsGallery>
          {
             m_wears.map((m_wear) => {
                return (
-                  <div
-                     className=" basis-[44%] md:basis-[30%] lg:basis-[20%] flex flex-col mb-5"
+                  <PropsContainer
                      onClick={() => {
                         navigate(
                            (m_wear.id <= 31215105 ) ?
@@ -25,11 +25,11 @@ export const M_wearsUI = () => {
                      }}
                      key={m_wear.id}
                   >
-                     {m_wear.ProductsGallery}
-                  </div>
+                     {m_wear.ProductsProps}
+                  </PropsContainer>
                )
             })
          }
-      </ProductsGalleryWrapper>
+      </ProductsGallery>
    )
 }

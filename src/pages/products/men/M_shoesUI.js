@@ -1,26 +1,26 @@
 import { m_shoes } from "../../../data/Products/men/m_shoes";
-import { ProductsGalleryWrapper } from "../../../components/ui/ProdsGalleryWrapper";
+import { ProductsGallery } from "../../../components/ui/ProductsGallery";
 import { useNavigate } from "react-router-dom";
+import { PropsContainer } from "../../../components/ui/PropsContainer";
 
 export const M_shoesUI = () => {
 
    const navigate = useNavigate();
 
    return (
-      <ProductsGalleryWrapper>
+      <ProductsGallery>
          {
             m_shoes.map((m_shoe) => {
                return (
-                  <div
-                     className=" basis-[44%] md:basis-[30%] lg:basis-[20%] flex flex-col mb-5"
+                  <PropsContainer
                      onClick={() => navigate(`/shopping/men/shoes/${m_shoe.alt}/${m_shoe.id}`)}
                      key={m_shoe}
                   >
-                     {m_shoe.ProductsGallery}
-                  </div>
+                     {m_shoe.ProductsProps}
+                  </PropsContainer>
                )
             })
          }
-      </ProductsGalleryWrapper>
+      </ProductsGallery>
    )
 }

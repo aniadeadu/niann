@@ -1,4 +1,4 @@
-import { productproperties } from "../../../components/ui/ProductsGallery";
+import { productproperties } from "../../../components/ui/ProductsProps";
 import crossbag_black_L from "../../../assets/images/products/women/bags/crossbag_black_L.png";
 import crossbag_black_S from "../../../assets/images/products/women/bags/crossbag_black_S.png";
 import crossbag_brown_L from "../../../assets/images/products/women/bags/crossbag_brown_L.png";

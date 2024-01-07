@@ -1,4 +1,4 @@
-import { productproperties } from "../../../components/ui/ProductsGallery";
+import { productproperties } from "../../../components/ui/ProductsProps";
 import biker_jacket from "../../../assets/images/products/women/clothings/biker_jacket.png";
 import breasted_coat from "../../../assets/images/products/women/clothings/breasted_coat.png";
 import cotton_shirt from "../../../assets/images/products/women/clothings/cotton_shirt.png";
@@ -25,21 +25,23 @@ import velvet_coat from "../../../assets/images/products/women/clothings/velvet_
 import viscose_leggings from "../../../assets/images/products/women/clothings/viscose_leggings.png";
 import wool_tuxedo_jacket from "../../../assets/images/products/women/clothings/wool_tuxedo_jacket.png";
 
+
 export const w_wears = [
+   
    productproperties(
-      31215001, satin_tube_dress_chain, 'satin tube dress chain black', 'satin tube dress_chain', 45, 'black'
+      31215001, satin_tube_dress_chain, 'satin tube dress chain black', 'satin tube dress_chain', 45, 'black',  
    ),
    productproperties(
-      31215002, gold_dress_with_fringed_skirt, 'gold dress with fringed skirt', 'dress with fringed skirt', 30, 'gold'
+      31215002, gold_dress_with_fringed_skirt, 'gold dress with fringed skirt', 'dress with fringed skirt', 30, 'gold',  
    ),
    productproperties(
-      31215003, midi_dress_with_cutout, 'black midi dress with cutout', 'midi dress with cutout', 40, 'black'
+      31215003, midi_dress_with_cutout, 'black midi dress with cutout', 'midi dress with cutout', 40, 'black',
    ),
    productproperties(
-      31215004, satin_long_skirt, 'black satin long skirt', 'satin long skirt', 60, 'black'
+      31215004, satin_long_skirt, 'black satin long skirt', 'satin long skirt', 60, 'black',
    ),
    productproperties(
-      31215005, velvet_coat, 'black velvet coat', 'velvet coat', 40, 'black'
+      31215005, velvet_coat, 'black velvet coat', 'velvet coat', 40, 'black',
    ),
    productproperties(
       31215006, leopardskin_fur_coat, 'leopardskin fur coat', 'leopardskin fur coat', 35, 'leopard skin'

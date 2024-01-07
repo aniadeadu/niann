@@ -1,9 +1,12 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 import { all_products } from "../../data/Products/all_products";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BtnUI } from "../../components/ui/Btn";
 import { w_bags } from "../../data/Products/women/w_bags";
 import { Dot } from "react-bootstrap-icons";
+import { CartContext } from "../../contexts/CartProvider";
+import { SizeContext } from "../../contexts/SizeProvider";
+import { Cart } from "../Cart";
 
 
 
@@ -11,16 +14,24 @@ import { Dot } from "react-bootstrap-icons";
 export const ProductsUI = () => {
 
    const {ProductId} = useParams();
- 
+   const [sizes, setSize] = useState(0);
+
    const location = useLocation();
+   const {handleCart, warning} = useContext(CartContext);
    const navigate = useNavigate();
-   const [size, setSize] = useState()
+
    // const [content, setContent] = useState();
  
 
-   const all = all_products.find((product) => product.id == parseInt(ProductId)) ;
-
-   const {image, name, price} = all
+   // const all = all_products.find((product) => product.id == parseInt(ProductId)) ;
+   const [all, setAll] = useState(all_products.find((product) => product.id == parseInt(ProductId)))
+   // const {image, name, price, size} = all
+   
+   useEffect(() => {
+      let tempAll = {...all}
+      tempAll.size = sizes;
+      setAll(tempAll)
+   }, [sizes])
 
  
    
@@ -45,17 +56,17 @@ export const ProductsUI = () => {
    //       </div>
    //    )
    //  }
-const Size = (start, stop, step) => {
+const Size = (start, stop, step, ) => {
   return  Array.from({length: (stop - start) / step + 1}, (_, i) => { 
   return (
-  <button className="border  px-5 py-5 text-center">{(start + i * step)}</button>
+  <button className="border  px-5 py-5 text-center" onClick={() => setSize(i)}>{(start + i * step)}</button>
   )})
 }
 
 const color = (color, onClick) => {
    return (<div className={'text-xl ' + color}></div>)
 }
-console.log((location.pathname.includes("/bag")))
+
 
 const colors = [
    {
@@ -77,32 +88,33 @@ const colors = [
    },
 ]
 
+
    return  (
       
       <div className="w-full my-36  px-5 sm:px-10 md:px-24 lg:px-36 gap-8 flex justify-end">
          <div className="w-[25rem] ">
-            <img src={image} className=""/>
+            <img src={all.image} className=""/>
          </div>
          <div className="border overflow-x-hidden px-5 space-y-10 py-10 w-[40%] border-black">
             <div className="space-y-2">
-            <p className="text-[1.9rem] pr-7 leading-none font-medium text-[rgba(0,0,0,.9)] " style={{fontVariant: "small-caps"}}>
-               {name.replace(/_/g, " ")}
+            <p className="text-[1.85rem] pr-7 leading-none font-medium text-[rgba(0,0,0,.9)] " style={{fontVariant: "small-caps"}}>
+               {all.name.replace(/_/g, " ")}
             </p>
             <p className="text-xl text-[rgba(0,0,0,.66)]" >
-               {price}
+               {all.price}.99 <span className="text-[0.95rem]">EUR</span>
             </p>
             </div>
             {
                (location.pathname.includes("/wears")) ?
                <div>
                
-                  <h3 className="font-medium text-base " style={{fontVariant: "small-caps"}}>
-                     select size:
+                  <h3 className="font-semibold text-[1.2rem] " style={{fontVariant: "small-caps"}}>
+                     select :
                   </h3>
                
-               <div className=" flex gap-3 flex-wrap">
+               <div className=" flex gap-3 flex-wrap" >
                   {
-                     Size(36, 56, 2)
+                     Size(36, 56, 2, )
                   }
                </div>
               
@@ -114,7 +126,7 @@ const colors = [
                   <div className="space-y-2">
                
                   <h3 className="font-semibold  text-[1.42rem]" style={{fontVariant: "small-caps"}}>
-                     select size:
+                     select :
                   </h3>
                
                <div className=" flex gap-3 flex-wrap">
@@ -136,7 +148,7 @@ const colors = [
                    <div className="flex items-center justify-start -ml-6 h-4 w-12">
                   {
                      colors.map((color) => (
-                           <button className={'text-[4rem] -mr-6 ' + color.color} title={color.title} onClick={() => navigate(color.link)}><Dot/></button>
+                        <button className={'text-[4rem] -mr-6 ' + color.color} title={color.title} onClick={() => navigate(color.link)}><Dot/></button>
                      ))
                   } 
                   </div>
@@ -150,13 +162,15 @@ const colors = [
            
             <div>
                <BtnUI
-                  title={'ADD TO CART'}
+                  title={'cart'}
                   type={'primary'}
-                  onClick={() => {}}
+                  onClick={() => {handleCart(all)}}
                   style={{fontVariant: "small-caps"}}
                />
             </div>
+            
          </div>
+         {/* <Cart setSize={setSize} /> */}
       </div>
    )
 }

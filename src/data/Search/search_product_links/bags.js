@@ -3,19 +3,19 @@ import  SearchTPL  from "../../../components/ui/SearchTPL";
 
 export const bags = [
   new SearchTPL (
-     "bags men" ,  '', ''
+     "bags men" ,  '/shopping/men/bags', 
   ),
   new SearchTPL (
-     "bags women",   '', '' 
+     "bags women",   '/shopping/women/bags',  
    ),
   new SearchTPL (
-        "handbags women",  '', ''
+        "handbags women",   
    ),
    new SearchTPL (
-        "crossbags women",  '', ''
+        "crossbags women",  
    ),
    new SearchTPL (
-     "purses",  '', ''
+     "purses",  
    )
 ]
 

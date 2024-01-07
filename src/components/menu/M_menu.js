@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { MenuListWrappper } from "../ui/MenuListsStyle"
+import { MenuListWrappper } from "../ui/Menu"
 import { ModalContext } from "../../contexts/ModalsProvider";
-import arrowback from "../../assets/svgs/arrowbackw.svg";
+import arrowback from "../../assets/svgs/arrowback.svg";
 import { useNavigate } from "react-router-dom";
 
 
@@ -33,14 +33,14 @@ export const M_menu = () => {
                <img src={arrowback} alt="back arrow" className="w-[0.6rem] mt-1"/>
             </div>
             <div
-               className="text-white capitalize underline"
+               className="text-black capitalize underline"
             >
                back
             </div>
          </button>
          <div className="space-y-10 " >
             <div className="space-y-3 ">
-            <div className="text-[1.4rem]  capitalize mb-6" style={{fontVariant: 'small-caps'}}>
+            <div className="text-[1.4rem] text-black capitalize mb-6" style={{fontVariant: 'small-caps'}}>
                   men
                </div>
                {

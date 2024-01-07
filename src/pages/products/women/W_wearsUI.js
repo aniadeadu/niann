@@ -1,9 +1,9 @@
-
 import { w_wears } from "../../../data/Products/women/w_wears";
-import { ProductsGalleryWrapper } from "../../../components/ui/ProdsGalleryWrapper";
+import { ProductsGallery } from "../../../components/ui/ProductsGallery";
 import { Footer } from "../../../layouts/Footer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { PropsContainer } from "../../../components/ui/PropsContainer";
 
 export const W_wearsUI = () => {
 
@@ -16,12 +16,11 @@ export const W_wearsUI = () => {
    
    return (
       <main className="w-full h-auto">
-         <ProductsGalleryWrapper>
+         <ProductsGallery>
             {
                w_wears.map((w_wear) => {
                   return (
-                     <div
-                        className=" basis-[50%] md:basis-[33.333%] border-r border-b cursor-pointer border-[rgba(20,20,20,.35)] lg:basis-[20%]  flex flex-col "
+                     <PropsContainer
                         onClick={() => {
                            navigate(
                               (w_wear.id <= 31215003) ?
@@ -41,14 +40,12 @@ export const W_wearsUI = () => {
                       
                         key={w_wear}
                      >
-                        {w_wear.ProductsGallery}
-                     </div>
+                        {w_wear.ProductsProps}
+                     </PropsContainer>
                   )
                })
             }
-         </ProductsGalleryWrapper>
-         
-      
+         </ProductsGallery>
       </main>
    )
 }

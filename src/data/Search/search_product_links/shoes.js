@@ -14,12 +14,7 @@ export const shoes = [
       new SearchTPL (
           "loafers",  '', ''
       ), 
-      new SearchTPL (
-         "jackets in women",  '', ''
-      ),
-      new SearchTPL (
-         "jackets in men",  '', ''
-     ),
+    
      new SearchTPL (
          "blazer",  '', ''
       ),
