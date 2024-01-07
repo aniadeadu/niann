@@ -65,8 +65,8 @@ export const Home = () => {
 
   console.log(currentIndex);
   return (
-    <div className="   h-screen w-full overflow-x-hidden overflow-y-hidden ">
-      <main className="relative w-full h-screen ">
+    <div className="    w-full overflow-x-hidden overflow-y-hidden ">
+      <main className="relative w-full  ">
         <>
           <div
             className="flex flex-1  w-[200%] overflow-x-hidden overflow-y-hidden absolute transition-all bg-black h-screen -z-10"
@@ -92,7 +92,7 @@ export const Home = () => {
         </>
 
         <section>
-          <header>
+          <header className="w-full h-full">
             <NavUI />
           </header>
 

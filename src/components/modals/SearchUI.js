@@ -20,7 +20,7 @@ export const SearchUI = () => {
   useEffect(() => {
     if (navbar_search === false) {
       setNavbar_search_style(
-        " bg-transparent absolute top-0 -right-[7rem] transition-all duration-300 "
+        " bg-transparent relative top-0 -right-[7rem] transition-all duration-300 "
       );
     } else {
       setNavbar_search_style(

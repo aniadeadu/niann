@@ -14,8 +14,8 @@ export const ModalUI = ({
   const { navbar_contact, setNavBar_contact } = useContext(ModalContext);
 
   return (
-    <div className=" z-40  w-full h-screen right-0 left-0 bottom-0 fixed">
-      <div className="w-full h-screen  right-0 backdrop-blur-lg	left-0 bottom-0 fixed bg-[rgba(135,135,135,.25)]">
+    <div className=" z-40  w-full h-screen top-0 right-0 left-0 bottom-0 fixed">
+      <div className="w-full h-screen  right-0 backdrop-blur-lg top-0 left-0 bottom-0 fixed bg-[rgba(135,135,135,.25)]">
         <div
           className={
             " text-black pl-10 pr-8 py-8 bg-white  overflow-x-hidden " +

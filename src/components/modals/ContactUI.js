@@ -9,7 +9,7 @@ export const ContactUI = () => {
   useEffect(() => {
     if (navbar_contact === false) {
       setNavBar_contact_style(
-        " bg-transparent absolute top-0 -left-[7rem] transition-all duration-300 "
+        " bg-transparent relative top-0 -left-[7rem] transition-all duration-300 "
       );
     } else {
       setNavBar_contact_style(

@@ -113,12 +113,12 @@ export const NavUI = () => {
   };
 
   window.addEventListener("scroll", handleScroll);
-
+  console.log(window.outerHeight);
   return (
-    <div className="h-full w-full">
+    <div className=" w-full  py-5">
       <div
         className={
-          "w-full scroll-smooth    z-30 h-[4rem] py-5  px-3 sm:px-5 md:px-10 lg:px-20 2xl:px-36 fixed top-0  " +
+          "w-full scroll-smooth z-30 h-[4rem] py-5  px-3 sm:px-5 md:px-10 lg:px-20 2xl:px-36 fixed top-0  " +
           color
         }
       >
@@ -175,9 +175,7 @@ export const NavUI = () => {
           <img
             src={logoColor}
             alt="NIANN logo"
-            className={
-              "w-[10rem] md:w-[25rem] lg:w-[30rem] md:mx-auto  " + logo
-            }
+            className={"w-[10rem] md:w-[25rem] lg:w-[30rem] mx-auto  " + logo}
           ></img>
         </Link>
 

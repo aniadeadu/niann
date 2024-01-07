@@ -15,7 +15,7 @@ export const MenuUI = ({ children, sha }) => {
   useEffect(() => {
     if (navbar_menu === false) {
       setNavBar_menu_style(
-        " bg-transparent absolute top-0 -right-[7rem] transition-all duration-300 "
+        " bg-transparent relative top-0 -right-[7rem] transition-all duration-300 "
       );
     } else {
       setNavBar_menu_style(
@@ -58,7 +58,7 @@ export const MenuUI = ({ children, sha }) => {
     navbar_menu && (
       <ModalUI navbar_menu_style={navbar_menu_style}>
         <div
-          className="w-[300%]  flex space-x-56 overflow-x-hidden"
+          className="w-[300%] h-full flex space-x-56 overflow-x-hidden"
           style={style()}
         >
           {sub_menu.map((_, index) => (
